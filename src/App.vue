@@ -1,12 +1,24 @@
 <template>
   <div id="app">
-    <nav>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </nav>
-    <router-view/>
+    <MonitorView></MonitorView>
+    <ControllerView></ControllerView>
+    <InputView></InputView>
   </div>
 </template>
+
+<script>
+import ControllerView from "./views/ControllerView.vue";
+import MonitorViewVue from "./views/MonitorView.vue";
+import InputView from "./views/InputView.vue";
+
+export default {
+  components: {
+    ControllerView,
+    MonitorView,
+    InputView,
+  },
+};
+</script>
 
 <style>
 #app {
